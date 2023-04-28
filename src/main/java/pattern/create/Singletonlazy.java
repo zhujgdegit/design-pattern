@@ -16,7 +16,7 @@ public class Singletonlazy {
 
     public static SingletonHungry getInstance() {
         if (instance == null) {
-            //保障线程同步安全
+            //线程安全
             synchronized (SingletonHungry.class) {
                 if (instance == null) {
                     instance = new SingletonHungry();
